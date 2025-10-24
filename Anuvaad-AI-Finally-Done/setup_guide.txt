@@ -1,0 +1,224 @@
+================================================================================
+                    ANUVAAD AI - QUICK SETUP GUIDE
+================================================================================
+
+Get Anuvaad AI running on your laptop in just a few simple steps!
+
+================================================================================
+                           PREREQUISITES
+================================================================================
+
+Install these on your system first:
+
+1. Python 3.10 or higher
+   Download: https://www.python.org/downloads/
+   Verify: python --version
+
+2. Node.js 18 or higher
+   Download: https://nodejs.org/
+   Verify: node --version
+
+3. FFmpeg (Required for video/audio processing)
+   Windows: https://ffmpeg.org/download.html
+   Mac: brew install ffmpeg
+   Linux: sudo apt-get install ffmpeg
+   Verify: ffmpeg -version
+
+4. VS Code (Recommended)
+   Download: https://code.visualstudio.com/
+
+================================================================================
+                     QUICK START (3 SIMPLE STEPS)
+================================================================================
+
+STEP 1: Get API Keys
+--------------------
+You need API keys to use the AI features:
+
+a) ElevenLabs (for AI voices):
+   - Sign up at: https://elevenlabs.io/
+   - Get API key: https://elevenlabs.io/app/settings/api-keys
+
+b) Google Gemini (for translation):
+   - Get API key: https://ai.google.dev/
+
+
+STEP 2: Install Dependencies
+-----------------------------
+Open terminal in VS Code (Ctrl+` or Cmd+`) and run:
+
+a) Create Python virtual environment:
+   python -m venv venv
+
+b) Activate virtual environment:
+   Windows:   venv\Scripts\activate
+   Mac/Linux: source venv/bin/activate
+
+c) Install Python packages:
+   pip install -r app_requirements.txt
+
+
+STEP 3: Configure API Keys
+---------------------------
+a) Copy the example file:
+   Windows:   copy .env.example .env
+   Mac/Linux: cp .env.example .env
+
+b) Edit .env file and add your API keys:
+   - ELEVENLABS_API_KEY=your_actual_key_here
+   - GEMINI_API_KEY=your_actual_key_here
+   - JWT_SECRET_KEY=any_random_string_here
+
+   Tip: Generate JWT secret with:
+   python -c "import secrets; print(secrets.token_hex(32))"
+
+
+================================================================================
+                    🚀 RUNNING THE APPLICATION
+================================================================================
+
+Just ONE command to start everything!
+
+1. Make sure virtual environment is activated:
+   Windows:   venv\Scripts\activate
+   Mac/Linux: source venv/bin/activate
+
+2. Run this single command:
+   
+   python start.py
+
+That's it! ✅
+
+The script will:
+- Check your .env file
+- Install frontend dependencies (first time only)
+- Start both backend and frontend servers
+- Open automatically at http://localhost:5000
+
+
+================================================================================
+                         WHAT YOU'LL SEE
+================================================================================
+
+When you run 'python start.py', you'll see:
+
+✅ .env file found
+✅ Node.js is installed
+✅ Frontend dependencies are installed
+📡 Starting Backend Server (Flask)...
+✅ Backend started on http://localhost:5001
+🎨 Starting Frontend Server (Vite)...
+
+============================================================
+✅ Anuvaad AI is now running!
+============================================================
+
+🌐 Open your browser and go to:
+   👉 http://localhost:5000
+
+⏹️  Press Ctrl+C to stop both servers
+============================================================
+
+
+TO STOP THE APPLICATION:
+------------------------
+Just press Ctrl+C in the terminal - it will stop both servers automatically!
+
+
+================================================================================
+                           VS CODE TIPS
+================================================================================
+
+For the best experience in VS Code:
+
+1. Open the project folder:
+   File → Open Folder → Select anuvaad-ai folder
+
+2. Open integrated terminal:
+   Press Ctrl+` (backtick) or View → Terminal
+
+3. Activate virtual environment in terminal:
+   Windows:   venv\Scripts\activate
+   Mac/Linux: source venv/bin/activate
+
+4. Run the app:
+   python start.py
+
+5. Your browser should show the app at http://localhost:5000
+
+
+================================================================================
+                        TROUBLESHOOTING
+================================================================================
+
+Problem: ".env file not found" error
+Solution: Make sure you created .env file from .env.example
+         cp .env.example .env
+
+Problem: "Module not found" error  
+Solution: Activate virtual environment and install dependencies:
+         pip install -r requirements.txt
+
+Problem: "FFmpeg not found" error
+Solution: Install FFmpeg and ensure it's in your system PATH
+
+Problem: "Port already in use" error
+Solution: Stop any apps using ports 5000 or 5001, or restart your computer
+
+Problem: Frontend dependencies installing slowly
+Solution: This is normal the first time. It might take 2-5 minutes.
+
+Problem: API key errors when using features
+Solution: Check your .env file has correct API keys with no extra spaces
+
+
+================================================================================
+                         FOLDER STRUCTURE
+================================================================================
+
+anuvaad-ai/
+├── start.py              ⭐ Single command to start everything
+├── .env.example          📝 Template for your API keys
+├── .env                  🔑 Your actual API keys (create this)
+├── app_requirements.txt  📦 Python dependencies
+├── backend.py            🔧 Flask backend server
+├── frontend/             🎨 React frontend
+│   ├── package.json
+│   └── src/
+├── setup_guide.txt       📖 This file!
+└── ...
+
+
+================================================================================
+                         DAILY WORKFLOW
+================================================================================
+
+Every time you want to use Anuvaad AI:
+
+1. Open project in VS Code
+2. Open terminal (Ctrl+`)
+3. Activate environment:
+   Windows:   venv\Scripts\activate
+   Mac/Linux: source venv/bin/activate
+4. Run: python start.py
+5. Go to http://localhost:5000 in browser
+6. When done, press Ctrl+C to stop
+
+
+================================================================================
+                       IMPORTANT NOTES
+================================================================================
+
+✅ The app uses SQLite (no database setup needed)
+✅ Both servers run with one command
+✅ Frontend installs dependencies automatically first time
+✅ Keep your API keys secure - never share your .env file
+✅ Need internet connection for AI API calls
+✅ Video processing can be resource-intensive
+
+
+Need help? Check the error messages - they usually tell you what's wrong!
+
+================================================================================
+                          ENJOY ANUVAAD AI! 🎉
+================================================================================

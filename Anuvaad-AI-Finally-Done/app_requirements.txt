@@ -1,0 +1,29 @@
+Flask==3.0.0
+Flask-CORS==4.0.0
+Flask-SQLAlchemy==3.1.1
+Flask-Bcrypt==1.0.1
+Flask-JWT-Extended==4.6.0
+Werkzeug==3.0.1
+
+# AI & Translation Services
+elevenlabs==1.0.0
+google-genai==1.0.0
+
+# Video & Audio Processing
+moviepy==1.0.3
+pydub==0.25.1
+SpeechRecognition==3.10.1
+librosa==0.10.1
+soundfile==0.12.1
+ffmpeg-python==0.2.0
+
+# YouTube & Web
+yt-dlp==2024.3.10
+requests==2.31.0
+
+# Database
+psycopg2-binary==2.9.9
+
+# Utilities
+numpy==1.26.3
+python-dotenv==1.0.0

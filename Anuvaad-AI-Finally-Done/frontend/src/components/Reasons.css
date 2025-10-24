@@ -1,0 +1,83 @@
+.reasons-section {
+  padding: 4rem 4%;
+  background: #000;
+}
+
+.reasons-title {
+  color: #e5e5e5;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.reason-card {
+  background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.reason-card:hover {
+  transform: scale(1.02);
+}
+
+.reason-icon-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.reason-icon {
+  font-size: 3rem;
+  display: block;
+}
+
+.reason-card h3 {
+  color: #e5e5e5;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.reason-card p {
+  color: #b3b3b3;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .reasons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .reasons-section {
+    padding: 3rem 4%;
+  }
+
+  .reasons-title {
+    font-size: 1.5rem;
+  }
+
+  .reasons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reason-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .reason-icon {
+    font-size: 2.5rem;
+  }
+
+  .reason-card h3 {
+    font-size: 1.3rem;
+  }
+}

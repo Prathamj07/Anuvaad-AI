@@ -1,0 +1,277 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background: #141414;
+  border-radius: 8px;
+  padding: 3rem 4rem;
+  max-width: 450px;
+  width: 90%;
+  position: relative;
+  animation: slideUp 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.modal-close:hover {
+  opacity: 0.7;
+}
+
+.modal-content h2 {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 1rem;
+  background: #333;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  background: #454545;
+}
+
+.form-group input::placeholder {
+  color: #8c8c8c;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #b3b3b3;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: auto;
+  cursor: pointer;
+}
+
+.forgot-link {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.forgot-link:hover {
+  color: #fff;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 1rem;
+  background: #E50914;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: #f40612;
+}
+
+.modal-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.modal-footer p {
+  color: #737373;
+  font-size: 0.95rem;
+}
+
+.modal-footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: text-decoration 0.2s ease;
+}
+
+.modal-footer a:hover {
+  text-decoration: underline;
+}
+
+.feature-modal {
+  max-width: 800px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.feature-modal-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.feature-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 2rem 2.5rem 0;
+}
+
+.feature-icon {
+  font-size: 3rem;
+}
+
+.feature-modal-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.feature-modal-body {
+  padding: 0 2.5rem;
+}
+
+.feature-modal-body p {
+  color: #e5e5e5;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.feature-details h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.feature-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-details li {
+  color: #b3b3b3;
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.feature-details li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #E50914;
+  font-weight: bold;
+}
+
+.feature-modal-footer {
+  margin-top: 2rem;
+  padding: 0 2.5rem 2.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-get-started {
+  padding: 0.75rem 2.5rem;
+  background: #E50914;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-get-started:hover {
+  background: #f40612;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 2rem 1.5rem;
+    width: 95%;
+  }
+  
+  .feature-modal {
+    padding: 2rem 1.5rem;
+  }
+  
+  .modal-content h2 {
+    font-size: 1.5rem;
+  }
+}

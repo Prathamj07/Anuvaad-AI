@@ -1,0 +1,89 @@
+.feature-card-netflix {
+  min-width: 280px;
+  height: 350px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.feature-card-netflix:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(229, 9, 20, 0.4);
+  z-index: 10;
+}
+
+.card-image {
+  height: 60%;
+  background: linear-gradient(135deg, #E50914 0%, #831010 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.card-icon {
+  font-size: 4rem;
+  filter: brightness(1.2);
+}
+
+.feature-card-netflix:hover .card-image {
+  height: 50%;
+}
+
+.card-overlay {
+  padding: 1.5rem;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.feature-card-netflix:hover .card-overlay {
+  height: 50%;
+  background: rgba(229, 9, 20, 0.1);
+}
+
+.card-overlay h3 {
+  color: #fff;
+  margin: 0 0 0.75rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.card-overlay p {
+  color: #b3b3b3;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.feature-card-netflix:hover .card-overlay p {
+  color: #e5e5e5;
+}
+
+@media (max-width: 768px) {
+  .feature-card-netflix {
+    min-width: 220px;
+    height: 300px;
+  }
+  
+  .card-icon {
+    font-size: 3rem;
+  }
+  
+  .card-overlay h3 {
+    font-size: 1.1rem;
+  }
+  
+  .card-overlay p {
+    font-size: 0.85rem;
+  }
+}
