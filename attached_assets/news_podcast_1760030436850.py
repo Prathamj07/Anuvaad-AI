@@ -6,8 +6,8 @@ import json
 # ---------------------------
 # 1️⃣ Set your API keys
 # ---------------------------
-GEMINI_API_KEY = "AIzaSyBqp2PwIV4QgLIjo73mKmt7vyb-D1HnkhA"
-ELEVENLABS_API_KEY = "sk_b8c6c84322c3f2e6dc4242bab781a0e46aa5dd742f1b82a5"
+GEMINI_API_KEY = "Gemini API key"
+ELEVENLABS_API_KEY = "Eleven Labs API Key"
 
 if not GEMINI_API_KEY or not ELEVENLABS_API_KEY:
     exit("🚨 Please set both GEMINI_API_KEY and ELEVENLABS_API_KEY.")
@@ -167,3 +167,4 @@ if os.path.exists(temp_file_list):
 for file in audio_files:
     if os.path.exists(file):
         os.remove(file)
+
