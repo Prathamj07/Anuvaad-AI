@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+
+# Environment
+.env
+*.env
+
+# Replit and local states
+.local/
+replit/
+
+# Node
+node_modules/
+dist/
+build/
